@@ -24,7 +24,13 @@ import { NotFoundComponent } from './errors/not-found/not-found.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [{provide: 'canDeactivateCreateEvent', useValue: checkDirtyState}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export function checkDirtyState(component: CreateEventComponent){
+  if(component.isDirty)
+    return window.confirm('You have not saved thi event, do you really want to cancel?')
+  return true;
+}
