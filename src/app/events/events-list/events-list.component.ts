@@ -3,6 +3,7 @@ import { EventService } from '../shared/event.service';
 import { toBase64String } from '@angular/compiler/src/output/source_map';
 import { ToastrService } from 'src/app/common/toastr.service';
 import { ActivatedRoute } from '@angular/router';
+import { IEvent } from '../shared';
 
 @Component({
   selector: 'app-events-list',
@@ -11,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class EventsListComponent implements OnInit {
 
-  events: any;
+  events: IEvent[];
   constructor(private eventService: EventService, private toastr: ToastrService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
