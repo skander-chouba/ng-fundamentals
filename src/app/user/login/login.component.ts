@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,14 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  userName = '';
-  password = '';
-  constructor() { }
+  userName: string;
+  password: string;
+  mouseoverLogin: boolean;
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  login(formValue){
-    console.log(formValue);
+  login(formValue): void{
+    this.authService.loginUser(this.userName, this.password)
+    this.router.navigate(['events']);
+  }
+
+  cancel(): void{
+    this.router.navigate(['events']);
   }
 }
