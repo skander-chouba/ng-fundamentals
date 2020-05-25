@@ -13,7 +13,7 @@ import{
   CreateEventComponent,
 } from './events/index';
 import { CreateSessionComponent } from './events/event-details/create-session/create-session.component';
-import { SessionListComponent } from './events/eventDetails/session-list/session-list.component'
+import { SessionListComponent } from './events/event-details/session-list/session-list.component'
 
 @NgModule({
   declarations: [
