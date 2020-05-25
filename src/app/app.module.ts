@@ -11,7 +11,8 @@ import{
   EventThumbnailComponent,
   EventDetailsComponent,
   CreateEventComponent,
-} from './events/index'
+} from './events/index';
+import { CreateSessionComponent } from './events/create-session/create-session.component'
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import{
     NavbarComponent,
     EventDetailsComponent,
     CreateEventComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    CreateSessionComponent
   ],
   imports: [
     BrowserModule,
