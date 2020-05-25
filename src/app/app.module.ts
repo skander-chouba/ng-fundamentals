@@ -12,7 +12,7 @@ import{
   EventDetailsComponent,
   CreateEventComponent,
 } from './events/index';
-import { CreateSessionComponent } from './events/create-session/create-session.component'
+import { CreateSessionComponent } from './events/event-details/create-session/create-session.component'
 
 @NgModule({
   declarations: [
