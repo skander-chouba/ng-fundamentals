@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './nav/navbar/navbar.component';
@@ -33,7 +34,8 @@ import { CollapsibleWellComponent } from './common/collapsible-well/collapsible-
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule
   ],
   providers: [{provide: 'canDeactivateCreateEvent', useValue: checkDirtyState}],
   bootstrap: [AppComponent]
