@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ISession } from '../../shared';
+import { faFire } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'session-list',
@@ -9,6 +11,8 @@ import { ISession } from '../../shared';
 export class SessionListComponent implements OnInit {
 
   @Input() sessions: ISession[];
+  fireIcon = faFire;
+
   constructor() { }
 
   ngOnInit(): void {
