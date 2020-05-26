@@ -13,7 +13,8 @@ import{
   CreateEventComponent,
 } from './events/index';
 import { CreateSessionComponent } from './events/event-details/create-session/create-session.component';
-import { SessionListComponent } from './events/event-details/session-list/session-list.component'
+import { SessionListComponent } from './events/event-details/session-list/session-list.component';
+import { CollapsibleWellComponent } from './common/collapsible-well/collapsible-well.component'
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SessionListComponent } from './events/event-details/session-list/sessio
     CreateEventComponent,
     NotFoundComponent,
     CreateSessionComponent,
-    SessionListComponent
+    SessionListComponent,
+    CollapsibleWellComponent
   ],
   imports: [
     BrowserModule,
