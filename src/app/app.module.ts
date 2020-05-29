@@ -17,7 +17,8 @@ import { CreateSessionComponent } from './events/event-details/create-session/cr
 import { SessionListComponent } from './events/event-details/session-list/session-list.component';
 import { CollapsibleWellComponent } from './common/collapsible-well/collapsible-well.component';
 import { DurationPipe } from './events/shared/duration.pipe'
-
+import { TOASTR_TOKEN, Toastr } from './common/toastr.service';
+let toastr:Toastr = window['toastr'];
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +40,10 @@ import { DurationPipe } from './events/shared/duration.pipe'
     ReactiveFormsModule,
     FontAwesomeModule
   ],
-  providers: [{provide: 'canDeactivateCreateEvent', useValue: checkDirtyState}],
+  providers: [
+    {provide: 'canDeactivateCreateEvent', useValue: checkDirtyState},
+    {provide: TOASTR_TOKEN, useValue: toastr}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
