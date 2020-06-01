@@ -13,12 +13,12 @@ import{
   EventDetailsComponent,
   CreateEventComponent,
 } from './events/index';
+import {JQ_TOKEN, TOASTR_TOKEN, Toastr, CollapsibleWellComponent} from './common/index';
 import { CreateSessionComponent } from './events/event-details/create-session/create-session.component';
 import { SessionListComponent } from './events/event-details/session-list/session-list.component';
-import { CollapsibleWellComponent } from './common/collapsible-well/collapsible-well.component';
 import { DurationPipe } from './events/shared/duration.pipe'
-import { TOASTR_TOKEN, Toastr } from './common/toastr.service';
 let toastr:Toastr = window['toastr'];
+let jQuery = window['$'];
 @NgModule({
   declarations: [
     AppComponent,
