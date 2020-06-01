@@ -16,7 +16,8 @@ import{
 import {JQ_TOKEN, TOASTR_TOKEN, Toastr, CollapsibleWellComponent} from './common/index';
 import { CreateSessionComponent } from './events/event-details/create-session/create-session.component';
 import { SessionListComponent } from './events/event-details/session-list/session-list.component';
-import { DurationPipe } from './events/shared/duration.pipe'
+import { DurationPipe } from './events/shared/duration.pipe';
+import { SimpleModalComponent } from './common/simple-modal/simple-modal.component'
 let toastr:Toastr = window['toastr'];
 let jQuery = window['$'];
 @NgModule({
@@ -31,7 +32,8 @@ let jQuery = window['$'];
     CreateSessionComponent,
     SessionListComponent,
     CollapsibleWellComponent,
-    DurationPipe
+    DurationPipe,
+    SimpleModalComponent
   ],
   imports: [
     BrowserModule,
